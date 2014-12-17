@@ -1,4 +1,4 @@
 CCS
 ===
 
-commom compass/sass function,placeholder,mixin
+common compass/sass function,placeholder,mixin
