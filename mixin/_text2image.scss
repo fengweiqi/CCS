@@ -1,0 +1,14 @@
+@mixin ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    @if $legacy-support-for-ie {
+        *text-indent: -150%;
+    }
+    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%;
+    }
+}

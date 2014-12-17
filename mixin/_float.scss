@@ -1,0 +1,11 @@
+@mixin float($side:left){
+    float: unquote($side);
+    @if $legacy-support-for-ie {
+        _display:inline;
+    }
+}
+
+@mixin reset-float($display:block){
+    float: none;
+    display: $display;
+}

@@ -1,0 +1,7 @@
+@mixin min-height($height){
+    min-height: $height;
+    height: auto !important;
+    @if $legacy-support-for-ie {
+        _height: $height;
+    }
+}
