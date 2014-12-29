@@ -1,0 +1,13 @@
+@charset "utf-8";
+// 已知宽高元素水平垂直居中mixin
+// $width:元素宽度
+// $height:元素高度
+@mixin center($width,$height){
+	
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-top:-$height/2;
+    margin-left:-$width/2;
+    z-index:10000;
+}

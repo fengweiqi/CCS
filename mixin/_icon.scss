@@ -1,0 +1,22 @@
+@charset "utf-8";
+// 作用：引用小图标
+// $iconName:小图标名称，不带后缀
+// $isLineHeight：是否设置行高等于图标高度，默认是否
+// $paddingLeft: 左内填充，默认是0
+// $paddingRight: 右内填充，默认是0
+%inline-block{
+	@include inline-block;
+
+}
+@mixin icon($iconName,$isLineHeight:false,$paddingLeft:0,$paddingRight:0){
+                                    $width: icons-sprite-width($iconName);
+                                    $height: icons-sprite-height($iconName);
+                                    @extend %inline-block;
+                                    width: $width+(-($paddingLeft+$paddingRight));
+                                    height: $height;
+                                    padding-left:$paddingLeft;
+                                    @if $isLineHeight == true {
+                                    	line-height: $height;
+                                    }
+                                    @include icons-sprite($iconName);
+}

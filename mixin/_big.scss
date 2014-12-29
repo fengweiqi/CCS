@@ -1,0 +1,16 @@
+@charset "utf-8";
+%inline-block{
+	@include inline-block;
+
+}
+@mixin big($bigName,$isLineHeight:false){
+                                    $width: bigs-sprite-width($bigName);
+                                    $height: bigs-sprite-height($bigName);
+                                    @extend %inline-block;
+                                    width: $width;
+                                    height: $height;
+                                    @if $isLineHeight == true {
+                                    	line-height: $height;
+                                    }
+                                    @include bigs-sprite($bigName);
+                                }

@@ -1,0 +1,10 @@
+@charset "utf-8";
+// 设置一组小图标
+// $list: 图标数组，如：$list:tw,fb,google,paypal;
+@mixin listClass($list){
+	@each $item in $list{
+        .#{$item}{
+            @include icon($item);
+        }
+    }
+}

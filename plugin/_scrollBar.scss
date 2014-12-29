@@ -1,0 +1,29 @@
+%position{
+	position: absolute;left: 1px;
+}
+.scrollBar{
+	height: 100%;
+	width: 21px;
+	background-repeat:repeat-y;
+	background:#a07e56;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top:0;
+	z-index: 111}
+.scrollUp{
+	@include icon(scrollUp);
+	
+	@extend %position;
+}
+.scrollDown{cursor: pointer;
+@include icon(scrollUp);
+@extend %position;
+bottom:0;
+}
+
+.scrollHandle{
+	position: absolute;left: 1px;top:17px;cursor: n-resize;
+	@include icon(scrollHandle);
+}
+
