@@ -1,0 +1,14 @@
+@charset "utf-8";//必须设置了这个才能编译有中文的注释
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities/sprites";
+@import "compass/layout/stretching";
+@import "placeholders/float";//浮动占位符
+@import "placeholders/horizontal-center";//水平居中占位符
+@import "placeholders/text2image";
+@import "placeholders/clearfix";//清除浮动
+@import "placeholders/inline-block";//设置为行内元素
+@import "mixin/icon";//引用小图标
+@import "mixin/listClass";//一系列背景图标
+@import "mixin/triangle";//三角
+@import "mixin/big";//引用大图标
