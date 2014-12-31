@@ -6,7 +6,7 @@ common compass/sass function,placeholder,mixin
 ###一、使用办法
 比如项目目录结构是这样
 - ---sass
-- ---config.rb
+   - ---config.rb
   
 - ---css
 - ---js
