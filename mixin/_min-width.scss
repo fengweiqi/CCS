@@ -1,0 +1,9 @@
+@charset "utf-8";
+// 最小宽度
+@mixin min-width($width){
+    min-width: $width;
+    width: auto !important;
+    @if $legacy-support-for-ie {
+        _width: $width;
+    }
+}
