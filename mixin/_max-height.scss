@@ -1,0 +1,9 @@
+@charset "utf-8";
+// 最大高度
+@mixin max-height($height){
+    max-height: $height;
+    height: auto !important;
+    @if $legacy-support-for-ie {
+        _height: $height;
+    }
+}

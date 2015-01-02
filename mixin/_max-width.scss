@@ -1,0 +1,9 @@
+@charset "utf-8";
+// 最大宽度
+@mixin max-width($width){
+    max-width: $width;
+    width: auto !important;
+    @if $legacy-support-for-ie {
+        _width: $width;
+    }
+}
