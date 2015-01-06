@@ -40,14 +40,14 @@
 	
 	#prev{
 		
-		$height:image-height($prev);
+		$height:$pnHeight;
 		left:2%;
 		
 		@extend %pn;
 		margin-top:-$height/2;
 	}
 	#next{
-		$height:image-height($next);
+		$height:$pnHeight;
 		@extend %pn;
 		 
 		margin-top:-$height/2;
