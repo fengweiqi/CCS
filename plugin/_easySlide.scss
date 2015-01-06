@@ -22,10 +22,9 @@
 			}
 		}
 	}
-	$prev:'prev.png';
-	$next:'next.png';
-	$pnWidth:image-width($prev);
-	$pnHeight:image-height($prev);
+	
+	$pnWidth:30px;
+	$pnHeight:100px;
 	%pn{
 		width:2%;
 		
