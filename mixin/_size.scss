@@ -1,0 +1,8 @@
+@charset "utf-8";
+// 设置元素大小
+// $width:元素宽度
+// $height:元素高度
+@mixin size($width,$height : $width){
+	width:$width;
+	height:$height;
+}

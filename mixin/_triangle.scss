@@ -1,0 +1,27 @@
+@charset "utf-8";
+@import "CCS/placeholders/inline-block";//设置为行内元素
+
+%_triangle{
+    @extend %inline-block;
+    height: 0;
+    width: 0;
+    line-height: 0;
+    font-size: 0;
+}
+@mixin triangle($dir, $size, $color) {
+    @extend %_triangle;
+    border: $size transparent solid;
+ 
+    @if ($dir == "top" or $dir == "up") {
+        border-bottom-color: $color;
+    }
+    @else if ($dir == "right" or $dir == "after") {
+        border-left-color: $color;
+    }
+    @else if ($dir == "bottom" or $dir == "down") {
+        border-top-color: $color;
+    }
+    @else if ($dir == "left" or $dir == "before") {
+        border-right-color: $color;
+    }
+}

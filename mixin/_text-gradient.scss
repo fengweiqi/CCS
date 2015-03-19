@@ -1,0 +1,16 @@
+@charset "utf-8";
+// 字体渐变
+// $backgrountColor: 渐变规则
+// $defaultColor: 对不支持渐变的使用的颜色，仅chrome浏览器是支持字体渐变的。
+// 例子：
+// @include text-gradient(linear-gradient(to bottom ,#fa3 ,lighten(#fa3 ,50%)) ,#fa3);
+@mixin text-gradient($backgrountColor ,$defaultColor){
+    color:transparent;
+    @include background($backgrountColor); 
+    @include background-clip(text);
+    
+        *color : $defaultColor;
+        color : #{$defaultColor}\0;
+        background: none\0;
+    
+}

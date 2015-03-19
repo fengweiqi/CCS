@@ -1,0 +1,14 @@
+@charset "utf-8";
+@import "CCS/placeholders/inline-block";//设置为行内元素
+
+@mixin big($bigName,$isLineHeight:false){
+                                    $width: bigs-sprite-width($bigName);
+                                    $height: bigs-sprite-height($bigName);
+                                    @extend %inline-block;
+                                    width: $width;
+                                    height: $height;
+                                    @if $isLineHeight == true {
+                                    	line-height: $height;
+                                    }
+                                    @include bigs-sprite($bigName);
+                                }

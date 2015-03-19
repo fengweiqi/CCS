@@ -1,0 +1,6 @@
+@charset "utf-8";
+// 设置元素高度和行高一致
+@mixin height($height){
+    height:$height;
+    line-height: $height;
+}

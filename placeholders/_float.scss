@@ -1,0 +1,9 @@
+@import "CCS/mixin/float";
+// 左浮
+%pull-left {
+    @include float(left);
+}
+// 右浮
+%pull-right {
+    @include float(right);
+}

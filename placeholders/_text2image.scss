@@ -1,0 +1,5 @@
+@charset "utf-8";
+@import "CCS/mixin/text2image";
+%ir {
+    @include ir;
+}

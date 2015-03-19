@@ -1,0 +1,13 @@
+@import "compass/css3";
+// 全屏薄幕，半透明效果
+#mask{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background:#000;
+	@include opacity(0.5);
+	display:none;
+	z-index:1000;
+}

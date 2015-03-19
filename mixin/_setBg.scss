@@ -1,0 +1,25 @@
+@charset "utf-8";
+// 作用：设置背景图片，元素大小等于图片大小
+// $image:图片
+@import "CCS/placeholders/inline-block";//设置为行内元素
+@mixin setBg($image,$paddingTop:0,$paddingRight:0,$paddingBottom:0,$paddingLeft:0){
+                                    $width:image-width($image);
+                                    $height:image-height($image);
+                                    @extend %inline-block;
+                                    width: $width+(-($paddingLeft+$paddingRight));
+                                    height: $height+(-($paddingTop+$paddingBottom));
+                                    padding-left:$paddingLeft;
+                                    @if $paddingTop != 0 {
+                                    	padding-top:$paddingTop;
+                                    }
+                                    @if $paddingLeft != 0 {
+                                          padding-left:$paddingLeft;
+                                    }
+                                    @if $paddingRight != 0 {
+                                          padding-right:$paddingRight;
+                                    }
+                                     @if $paddingBottom != 0 {
+                                          padding-bottom:$paddingBottom;
+                                    }
+                                    @include background(image-url($image) no-repeat);
+}

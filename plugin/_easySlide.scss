@@ -1,0 +1,78 @@
+@import "common/common";
+#easySlide{
+	$globalWidth:100%;
+	
+	width:$globalWidth;
+	
+	overflow:hidden;
+	.slideItem{
+		position:absolute;
+		
+		width:$globalWidth;
+		img{
+			width:100%;
+		}
+		.instruction{
+			position:absolute;
+			top:50%;
+			left:10%;
+			width:20%;
+			img{
+				width:100%;
+			}
+		}
+	}
+	
+	$pnWidth:30px;
+	$pnHeight:100px;
+	%pn{
+		width:2%;
+		
+		cursor: pointer;
+		position:absolute;
+		top:50%;
+		&{
+			img{
+				width:100%;
+			}
+		}
+	}
+	
+	#prev{
+		
+		$height:$pnHeight;
+		left:2%;
+		
+		@extend %pn;
+		margin-top:-$height/2;
+	}
+	#next{
+		$height:$pnHeight;
+		@extend %pn;
+		 
+		margin-top:-$height/2;
+		right:2%;
+	}
+// 轮播导航
+	#navigator{
+		position:absolute;
+		bottom:10%;
+		left:50%;
+
+		ul{
+			@include inline-block;
+			@extend %clearfix;
+			li{
+				float:left;
+				margin-right:2em;
+				a{
+					width:10px;
+					height:10px;
+					background:green;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	
+}

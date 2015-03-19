@@ -1,0 +1,9 @@
+@charset "utf-8";
+// 最小宽度
+@mixin min-width($width){
+    min-width: $width;
+   
+    
+        _width: $width;
+   
+}
