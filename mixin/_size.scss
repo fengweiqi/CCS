@@ -3,6 +3,7 @@
 // $width:元素宽度
 // $height:元素高度
 @mixin size($width,$height : $width){
+
 	width:$width;
 	height:$height;
 }

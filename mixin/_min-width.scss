@@ -2,8 +2,7 @@
 // 最小宽度
 @mixin min-width($width){
     min-width: $width;
-   
-    
-        _width: $width;
-   
+	_width: $width;
+   	width: auto !important;
+
 }

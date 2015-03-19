@@ -8,9 +8,11 @@
     color:transparent;
     @include background($backgrountColor); 
     @include background-clip(text);
+
     
         *color : $defaultColor;
         color : #{$defaultColor}\0;
         background: none\0;
     
 }
+

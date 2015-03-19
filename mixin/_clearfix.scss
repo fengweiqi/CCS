@@ -2,9 +2,10 @@
 // 清除浮动，使用方法@include clearfix;
 // 但placeholders里面有对应的占位符，推荐使用@extend %clearfix;
 @mixin clearfix {
+
    
         *zoom: 1;
-    
+
     &:before,
     &:after {
         content: "";
@@ -14,4 +15,6 @@
         clear: both;
         overflow: hidden;
     }
+
+
 }

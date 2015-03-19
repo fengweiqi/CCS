@@ -2,9 +2,11 @@
 // float,设置浮动，默认左浮
 @mixin float($side:left){
     float: unquote($side);
+
     
         _display:inline;
    
+
 }
 // 重置浮动
 @mixin reset-float($display:block){

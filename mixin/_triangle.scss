@@ -10,6 +10,7 @@
 }
 @mixin triangle($dir, $size, $color) {
     @extend %_triangle;
+
     border: $size transparent solid;
  
     @if ($dir == "top" or $dir == "up") {
