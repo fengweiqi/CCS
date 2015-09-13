@@ -1,0 +1,28 @@
+@charset "utf-8";
+@mixin setBg_m($image,$paddingTop:0,$paddingRight:0,$paddingBottom:0,$paddingLeft:0) {
+    $width: image-width($image);
+    $height: image-height($image);
+    display: inline-block;
+    width:($width+-$paddingLeft+-$paddingRight)/$fontSize+rem;
+    height:($height+-$paddingTop+-$paddingBottom)/$fontSize+rem;
+     @if $paddingLeft != 0 {
+    	padding-left:($paddingLeft/$fontSize)rem;
+    }
+   
+    @if $paddingTop != 0 {
+    	padding-top:($paddingTop/$fontSize)rem;
+    }
+    @if $paddingLeft != 0 {
+          padding-left:($paddingLeft/$fontSize)rem;
+    }
+    @if $paddingRight != 0 {
+
+          padding-right:($paddingRight/$fontSize)rem;
+    }
+     @if $paddingBottom != 0 {
+     	 padding-bottom:($paddingBottom/$fontSize)rem;
+       
+    }
+    @include background(image-url($image) no-repeat);
+    @include background-size(100%, 100%);
+}
